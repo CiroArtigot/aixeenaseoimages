@@ -15,7 +15,7 @@ This plugin is thinked for developers so by default you must add some tag classe
 
 The plugin works also with <img> tags and with style="background-image:url(), it can resize both of them.
 
-# Mandatory classes:
+## Mandatory classes:
 
 In the option "A class is mandatory" is enabled (it´s by default) is mandatory to add some classes to the <img> or to the element with the style.
 
@@ -25,4 +25,39 @@ To set the maximun size enter the "size-200" (to set the maximum size to 200px).
 
 To override the default quality you can use the "quality-80" to, for example set the quality to 80%.
 
+So you can resize an image to 300px and 60% quality with:
 
+```bash
+<img src="images/xxxxx.jpg" class="aixeena-images size-300 quality-60" /></code>
+```
+
+This will create a thumbnail in the images/thumbs directory and the img src attribute will be replaced with the thumb path.
+
+### Minimize style background images
+
+You can also minimize the images linked with the backgound-image CSS property.
+
+Add the aixeena-background class to the item tag that have the style:
+
+```bash
+<div class="aixeena-background aixeena-images size-215 quality-100" style="background-image:url(images/xxxx); "></div>
+```
+## Notes:
+
+* There is no way now to delete the thumbs by button, so if you want to replace the thumb of a image, delete it from the thumbs folder or change the image name (a new thumb will be generated)
+* I'm looking to create a delete option to delete the thumbs by url, and to delete all too.
+* It will be nice that someone can do a pull request of thie readme file to improve the engish redaction.
+
+## Contact:
+
+* The Aixeena Web Page is on construction so if you want to contact me you can do it on twitter or Linked in
+* https://twitter.com/CiroArtigot
+https://www.linkedin.com/in/ciroartigot
+
+## Licence
+
+* This sofware is free and GPU licensed
+
+** Donate
+
+* You can donate and help my with a beer or a cup of coffe to continue developing free an opensource for Joomla!
