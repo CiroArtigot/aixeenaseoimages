@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3" type="plugin" group="aixeenaseo">
+	<name>Aixeena SEO - Images</name>
+	<author>Ciro Artigot</author>
+	<creationDate>January 2017</creationDate>
+	<copyright>Copyright (C) 2015 Ciro Artigot. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@aixeena.org</authorEmail>
+	<authorUrl>www.aixeena.org</authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[<div style="background-color:#f2f2f2; padding:20px; margin:20px; border-radius:10px;">
+	<p><strong>AixeenaSEO Images</strong> it is a plugin to minimize the weight of the images of your Joomla.
+	With this plugin you can get better results in the performance of your website, because it creates thumbnails of your images, reducing their size and quality.</p>
+	<div style="clear:both"></div></div>]]>
+	</description>
+	
+	<files>
+		<filename plugin="aixeenaseoimages">aixeenaseoimages.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	 <updateservers>
+        <server type="extension" priority="2" name="Aixeena updates">
+				http://aixeena.org/updates/aixeena_seo/aixeenaseoimages.xml
+        </server>
+    </updateservers>
+	
+	<config>
+	
+	<fields name="params">
+		<fieldset name="basic">
+			
+			<field name="quality" type="number" default="70" step="1" min="10" size="3" max="100" label="Default JPEG Quality" description="Set the default JPEG quality of the thumbnails (between 0 and 100)" />
+			
+			<field name="qualitypng" type="number" default="8" step="1" min="1"  size="2" max="10" label="Default PNG Quality" description="Set the default PNG quality of the thumbnails (between 0 and 10)" />
+			
+			<field name="maxwidth" type="number" default="" step="1" min="1" size="6" max="10" label="Default max width (in px)" description="Set the images default maximun width (in pixels)" />
+			
+			<field name="dir" type="text" default="images/thumbs/" label="Thumbnails directory" description="Set the thumbnails directory in a xxx/xxxx/ format" />
+			
+			
+			<field name="needclass" type="radio" class="btn-group" default="1" description="A class is mandatory to minimize the images. Disable this option to minimize all the page images." label="A class is mandatory ">
+				<option value="0">Disable</option>
+				<option value="1">Enable</option>
+			</field>
+			
+			
+		</fieldset>
+	
+		
+	</fields>	
+	</config>
+</extension>
