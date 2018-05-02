@@ -24,14 +24,14 @@ This plugin is created by [Ciro Artigot](http://twitter/ciroartigot) to contribu
 
 3.- Install / Configuration
 --------------------------- 
-- Clone the repository or [Download Zip file](https://github.com/ciroartigot/aixeenaseoimages/)
+- Clone the repository or [Download Zip file](https://github.com/CiroArtigot/aixeenaseoimages/archive/master.zip)
 - Install it through Joomla Extension Manager 
 - Go to Extensions > Plug-in manager and search a plugin called "System - Aixeena SEO Images". Click it to enable / configure the plugin.
 
 4.- Mandatory classes
 ---------------------------
 
-**IMG TAG**
+### IMG TAgs
 
 If the option **"A class is mandatory"** is enabled (by default) is mandatory to add some classes to the <img> or to the element with the style.
 
@@ -44,31 +44,34 @@ To override the default quality you can use the "quality-80" to, for example set
 So, you can resize an image to 300px and 60% quality with:
 
 ```bash
-<img src="images/xxxxx.jpg" class="aixeena-images size-300 quality-60" /></code>
+<img src="images/xxxxx.jpg" class="aixeena-images size-300 quality-60" />
 ```
 
 This will create a thumbnail in the images/thumbs directory and the img src attribute will be replaced with the thumb path.
 
-### Minimize style background images
+### Sstyle background images
 
 You can also minimize the images linked with the backgound-image CSS property.
 
 Add the aixeena-background class to the item tag that have the style:
 
 ```bash
-<div class="aixeena-background aixeena-images size-215 quality-100" style="background-image:url(images/xxxx); "></div>
+<div 
+    class="aixeena-background aixeena-images size-215 quality-100" 
+    style="background-image:url(images/xxxx); ">
+</div>
 ```
 
 5.- Important notes
 ---------------------------
 
 * There is no way now to delete the thumbs by button, so if you want to replace the thumb of a image, delete it from the thumbs folder or change the image name (a new thumb will be generated)
-* I'm looking to create a delete option to delete the thumbs by url, and to delete all too.
-* It will be nice that someone can do a pull request of thie readme file to improve the engish redaction.
+* I'm looking an option to delete the thumbs by url, and an option to delete all too.
+* This extension is on beta mode, so if you are going to use it on production sites remember that is GNU licensed and no there is no warranty.
 
 6.- Donate
 ---------------------------
-You can donate and help my with a beer or a cup of coffe to continue developing free an opensource for Joomla!
+You can [donate](https://www.paypal.com/donate/?token=YJ_4RSeWoYiDjVYv0nqui0cvJgVJMI7Gp0NoDFs0URpD_VrWNAcwPy5bw3ZLWTcvSKEoW0&country.x=US&locale.x=US) and help my with a beer or a cup of coffe to continue developing free an opensource for Joomla!
 
 7.- Author & License
 ---------------------------
