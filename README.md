@@ -15,24 +15,33 @@ This plugin is created by [Ciro Artigot](http://twitter/ciroartigot) to contribu
 
 2.- Features
 ---------------------------
-* It works with jpeg and png images, you can minize the size and the quality.
-* The thumbs are stored on a local folder (images/thumbs/ by default) and repalced on the page content.
+* It works with jpeg and png images, and it can minimize the image size and the image quality.
+* The thumbs are stored on a local folder (images/thumbs/ by default) and replaced in the page content before rendering the page.
 * The plugin only work with local images.
 * You can set the default images qualities and maximum image size, and you can set the default thumb directory.
-* By default you must add some tag classes to make it work. You can also disable de option "A Class is mandatory" to minimize all the page images.
-* The plugin works also with <img> tags and with style="background-image:url(), it can resize both of them.
+* By default you must add some classes to make it work. You can also disable this  option "A Class is mandatory" to minimize all the page images without needing to add classes.
+* The plugin works also with tags with style="background-image:url(....)"
 
-## Mandatory classes:
+3.- Install / Configuration
+--------------------------- 
+- Clone the repository or [Download Zip file](https://github.com/ciroartigot/aixeenaseoimages/)
+- Install it through Joomla Extension Manager 
+- Go to Extensions > Plug-in manager and search a plugin called "System - Aixeena SEO Images". Click it to enable / configure the plugin.
 
-In the option "A class is mandatory" is enabled (it´s by default) is mandatory to add some classes to the <img> or to the element with the style.
+4.- Mandatory classes
+---------------------------
 
-To minimize an image you must add the "aixeena-images" class.
+**IMG TAG**
+
+If the option **"A class is mandatory"** is enabled (by default) is mandatory to add some classes to the <img> or to the element with the style.
+
+To minimize an image you must add the "aixeena-images" class to the element.
 
 To set the maximun size enter the "size-200" (to set the maximum size to 200px). This way you can resize by code each image in a different size. You can have different views for different displais (mobile, desktop...)
 
 To override the default quality you can use the "quality-80" to, for example set the quality to 80%.
 
-So you can resize an image to 300px and 60% quality with:
+So, you can resize an image to 300px and 60% quality with:
 
 ```bash
 <img src="images/xxxxx.jpg" class="aixeena-images size-300 quality-60" /></code>
@@ -49,22 +58,30 @@ Add the aixeena-background class to the item tag that have the style:
 ```bash
 <div class="aixeena-background aixeena-images size-215 quality-100" style="background-image:url(images/xxxx); "></div>
 ```
-## Notes:
+
+5.- Important notes
+---------------------------
 
 * There is no way now to delete the thumbs by button, so if you want to replace the thumb of a image, delete it from the thumbs folder or change the image name (a new thumb will be generated)
 * I'm looking to create a delete option to delete the thumbs by url, and to delete all too.
 * It will be nice that someone can do a pull request of thie readme file to improve the engish redaction.
 
-## Contact:
+6.- Donate
+---------------------------
+You can donate and help my with a beer or a cup of coffe to continue developing free an opensource for Joomla!
 
-* The Aixeena Web Page is on construction so if you want to contact me you can do it on twitter or Linked in
-* https://twitter.com/CiroArtigot
-https://www.linkedin.com/in/ciroartigot
+7.- Author & License
+---------------------------
+Showtags was developed by [Ciro Artigot](http://twitter.com/ciroartigot).
 
-## Licence
+This extension is licensed under GNU/GPL 2, http://www.gnu.org/licenses/gpl-2.0.html  
 
-* This sofware is free and GPU licensed
+8.- Contact
+---------------------------
+**Email**: ciro.artigot(at)gmail.com  
+**Twitter**: [http://twitter.com/ciroartigot](http://twitter.com/ciroartigot)  
+**Linked-In**: [Linked In](https://www.linkedin.com/in/ciroartigot)  
 
-** Donate
-
-* You can donate and help my with a beer or a cup of coffe to continue developing free an opensource for Joomla!
+9.- Changelog
+---------------------------
+v.1.0.0 - Development working version  
