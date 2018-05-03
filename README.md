@@ -7,7 +7,7 @@ Aixeena SEO Images
 
 **Aixeena SEO Images** is free Joomla plugin to minimize the weight of the images of your site.
 
-With this plugin you can get better results in the performance of your website, because it creates thumbnails of your images, reducing their size and quality.
+With this plugin you can get better results in the performance of your website, because it creates compressed images of your original images, reducing their size and quality.
 
 The plugin is thinked for Joomla developers who need or love to increase the perfomance of their sites.
 
