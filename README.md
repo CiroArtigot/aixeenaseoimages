@@ -16,9 +16,9 @@ This plugin is created by [Ciro Artigot](http://twitter/ciroartigot) to contribu
 2.- Features
 ---------------------------
 * It works with jpeg and png images, and it can minimize the image size and the image quality.
-* The thumbs are stored on a local folder (images/thumbs/ by default) and replaced in the page content before rendering the page.
+* The compressed images are stored on a local folder (images/thumbs/ by default) and replaced in the page content before rendering the page.
 * The plugin only work with local images.
-* You can set the default images qualities and maximum image size, and you can set the default thumb directory.
+* You can set the default images qualities and maximum image size, and you can set the default compressed images directory.
 * By default you must add some classes to make it work. You can also disable this  option "A Class is mandatory" to minimize all the page images without needing to add classes.
 * The plugin works also with tags with style="background-image:url(....)"
 
@@ -47,7 +47,7 @@ So, you can resize an image to 300px and 60% quality with:
 <img src="images/xxxxx.jpg" class="aixeena-images size-300 quality-60" />
 ```
 
-This will create a thumbnail in the images/thumbs directory and the img src attribute will be replaced with the thumb path.
+This will create a compressed image in the images/thumbs directory and the img src attribute will be replaced with the compressed image path.
 
 ### Sstyle background images
 
@@ -65,8 +65,8 @@ Add the aixeena-background class to the item tag that have the style:
 5.- Important notes
 ---------------------------
 
-* There is no way now to delete the thumbs by button, so if you want to replace the thumb of a image, delete it from the thumbs folder or change the image name (a new thumb will be generated)
-* I'm looking an option to delete the thumbs by url, and an option to delete all too.
+* There is no way now to delete the compressed images by button, so if you want to replace the compressed image, delete it from the thumbs folder or change the image name (a new compressed image will be generated)
+* I'm looking an option to delete the compressed images by url, and an option to delete all too.
 * This extension is on beta mode, so if you are going to use it on production sites remember that is GNU licensed and no there is no warranty.
 
 6.- Donate
@@ -75,7 +75,7 @@ You can [donate](https://www.paypal.com/donate/?token=YJ_4RSeWoYiDjVYv0nqui0cvJg
 
 7.- Author & License
 ---------------------------
-Showtags was developed by [Ciro Artigot](http://twitter.com/ciroartigot).
+AixeenaSEO images was developed by [Ciro Artigot](http://twitter.com/ciroartigot).
 
 This extension is licensed under GNU/GPL 2, http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -87,4 +87,4 @@ This extension is licensed under GNU/GPL 2, http://www.gnu.org/licenses/gpl-2.0.
 
 9.- Changelog
 ---------------------------
-v.1.0.0 - Development working version  
+v.1.0.0 - Beta version  
