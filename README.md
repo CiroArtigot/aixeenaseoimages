@@ -21,6 +21,7 @@ This plugin is created by [Ciro Artigot](http://twitter/ciroartigot) to contribu
 * You can set the default images qualities and maximum image size, and you can set the default compressed images directory.
 * By default you must add some classes to make it work. You can also disable this  option "A Class is mandatory" to minimize all the page images without needing to add classes.
 * The plugin works also with tags with style="background-image:url(....)"
+* You can have a compresed image by size (mobile, tabet, desktop...).You need to do that by code, using diferent classes for each size.
 
 3.- Install / Configuration
 --------------------------- 
