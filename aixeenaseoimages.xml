@@ -7,7 +7,7 @@
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<authorEmail>info@aixeena.org</authorEmail>
 	<authorUrl>www.aixeena.org</authorUrl>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<description>
 	<![CDATA[<div style="background-color:#f2f2f2; padding:20px; margin:20px; border-radius:10px;">
 	<p><strong>AixeenaSEO Images</strong> it is a plugin to minimize the weight of the images of your Joomla.
@@ -20,11 +20,12 @@
 		<filename>index.html</filename>
 	</files>
 	
-	 <updateservers>
+	<!--
+	<updateservers>
         <server type="extension" priority="2" name="Aixeena updates">
 				http://aixeena.org/updates/aixeena_seo/aixeenaseoimages.xml
         </server>
-    </updateservers>
+    </updateservers>-->
 	
 	<config>
 	
