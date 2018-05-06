@@ -11,6 +11,8 @@ With this plugin you can get better results in the performance of your website, 
 
 The plugin is thinked for Joomla developers who need or love to increase the perfomance of their sites.
 
+This plugin belongs to the Aixeena SEO plugin collection.
+
 This plugin is created by [Ciro Artigot](http://twitter/ciroartigot) to contribute to the Joomla community.
 
 2.- Features
@@ -69,6 +71,8 @@ Add the aixeena-background class to the item tag that have the style:
 * There is no way now to delete the compressed images by button, so if you want to replace the compressed image, delete it from the thumbs folder or change the image name (a new compressed image will be generated)
 * I'm looking an option to delete the compressed images by url, and an option to delete all too.
 * This extension is on beta mode, so if you are going to use it on production sites remember that is GNU licensed and no there is no warranty.
+* If the compressed image is bigger than the original one, the image link will not be changed.
+* The compressed image filename is generated with the relative path of the original image and the size (if a size-x class is present).
 
 6.- Donate
 ---------------------------
@@ -88,4 +92,5 @@ This extension is licensed under GNU/GPL 2, http://www.gnu.org/licenses/gpl-2.0.
 
 9.- Changelog
 ---------------------------
+v.1.0.1 - Changes: filename by path and size control.
 v.1.0.0 - Beta version  
