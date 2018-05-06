@@ -3,7 +3,7 @@
 	/*------------------------------------------------------------------------
 	# aixeenaseoimages.php - Aixeena SEO Images (plugin)
 	# ------------------------------------------------------------------------
-	# version		1.0.0
+	# version		1.0.1
 	# author    	Ciro Artigot for Aixeena.org
 	# copyright 	Copyright (c) 2018 CiroArtigot. All rights reserved.
 	# @license 		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
@@ -42,6 +42,8 @@
 		$debug = 1;
 		
 		if($theip == $myip && $debug) $p_debug = 1;
+		
+		//$p_debug = 1;
 		
 		// URL ALIAS
 		$alias = JFilterOutput::stringURLSafe(str_replace(JURI::base(),'', JURI::current()));
@@ -120,13 +122,23 @@
 					
 					if($p_debug) echo 'source:'.$source.'<hr/>';
 					
+					//if($p_debug) print_r(getimagesize($source)).'<hr/>';
+					
+					$filesize = filesize($source);
+					
+					if($p_debug) echo 'filesize:'.$filesize.'<hr/>';
+					
 					if(!$maxwidth) list($maxwidth, $alto) = getimagesize($source);
 					$sufixwidth = '';
+					
 					if($maxwidth) $sufixwidth = '-'.$maxwidth;
 					$extension = strtolower(substr(strrchr($link[0], '.'), 1));
 					
 					// The thumbnail filename
-					$filename = $alias.'-'.JFilterOutput::stringURLSafe(basename(str_replace('.'.$extension,'',strtolower($link[0])))).$sufixwidth;
+					//$filename = $alias.'-'.JFilterOutput::stringURLSafe(basename(str_replace('.'.$extension,'',strtolower($link[0])))).$sufixwidth;
+					$filename = JFilterOutput::stringURLSafe(str_replace('.'.$extension,'',strtolower($link[0]))).$sufixwidth;
+					
+					if($p_debug) echo '$link[0]:'.$link[0].'<hr/>';
 					
 					if($p_debug) echo '$filename:'.$filename.'<hr/>';
 					
@@ -136,7 +148,8 @@
 					if($p_debug) echo '$file:'.$file.'<hr/>';
 					
 					// The image URI
-					$filesrc = JUri::base().$dir.$filename.'.'.$extension;
+					//$filesrc = JUri::base().$dir.$filename.'.'.$extension;
+					$filesrc = $dir.$filename.'.'.$extension;
 					
 					if($p_debug) echo '$filesrc:'.$filesrc.'<hr/>';
 					
@@ -181,7 +194,14 @@
 						if($copia) imagedestroy($dest_image);
 					}
 					
-					$buffer = str_replace($link[0], $filesrc, $buffer);				
+					$filesize2 =  filesize($file);
+					
+					if($p_debug) echo '$filesize2:'.$filesize2.'<hr/>';
+					
+					if($filesize2 < $filesize) {
+						$buffer = str_replace('src="'.$link[0], 'src="'.$filesrc, $buffer);	
+						$buffer = str_replace('url('.$link[0], 'url('.$filesrc, $buffer);
+					}				
 					
 				}
 			}
